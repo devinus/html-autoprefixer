@@ -8,10 +8,6 @@ Autoprefix all CSS inside an html page - CSS inside style tags and inside style 
 [![NPM version](https://badge.fury.io/js/html-autoprefixer.png)](http://badge.fury.io/js/html-autoprefixer)
 
 ```
-var htmlAutoprefixer = require( "html-autoprefixer" );
-
-var htmlString = "<html><head><style>:fullscreen a { transition: transform 1s; }</style></head><body><h1 style='font-feature-settings: \"liga\", \"dlig\";'>Hello</h1></body></html>";
-
 var prefixed = htmlAutoprefixer.process( htmlString ).html;
 ```
 
@@ -28,7 +24,10 @@ There is only one available command. It mirrors [autoprefixer-core](https://gith
 You pass an html string to `.process`, and then call `.html` to return the processed html.
 
 ```
-var htmlString = "some string of html with style tags and style attributes";
+var 
+htmlAutoprefixer = require( "html-autoprefixer" ),
+htmlString = "<html><head><style>:fullscreen a { transition: transform 1s; }</style></head><body><h1 style='font-feature-settings: \"liga\", \"dlig\";'>Hello</h1></body></html>";
+
 var prefixed = autoprefixer.process( htmlString ).html;
 ```
 
