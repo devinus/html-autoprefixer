@@ -19,7 +19,7 @@ npm install html-autoprefixer
 
 ## Usage
 
-There is only one available command. It mirrors [autoprefixer-core](https://github.com/postcss/autoprefixer-core) API.
+There is one command. It mirrors [autoprefixer-core](https://github.com/postcss/autoprefixer-core) API.
 
 You pass an html string to `.process`, and then call `.html` to return the processed html.
 
