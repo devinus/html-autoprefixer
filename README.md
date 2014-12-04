@@ -31,6 +31,21 @@ htmlString = "<html><head><style>:fullscreen a { transition: transform 1s; }</st
 var prefixed = autoprefixer.process( htmlString ).html;
 ```
 
+### Gulp
+
+Using [Gulp](http://gulpjs.com)? Use [gulp-html-autoprefixer](https://github.com/RebelMail/gulp-html-autoprefixer).
+
+```javascript
+var gulp = require( "gulp" );
+var htmlAutoprefixer = require( "gulp-html-autoprefixer" );
+
+gulp.task( "html-autoprefix", function( ) {
+  return gulp.src( "./path/to/index-or-other.html" )
+    .pipe( htmlAutoprefixer( ) )
+    .pipe( gulp.dest( "dist" ) );
+} );
+```
+
 ## Contributing
 
 1. Fork it
