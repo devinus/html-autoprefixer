@@ -33,6 +33,8 @@ var prefixed = autoprefixer.process( htmlString ).html;
 
 ### Gulp
 
+[![](https://raw.githubusercontent.com/RebelMail/gulp-html-autoprefixer/master/gulp-html-autoprefixer.png)](https://github.com/RebelMail/gulp-html-autoprefixer)
+
 Using [Gulp](http://gulpjs.com)? Use [gulp-html-autoprefixer](https://github.com/RebelMail/gulp-html-autoprefixer).
 
 ```javascript
