@@ -28,7 +28,7 @@ var
 htmlAutoprefixer = require( "html-autoprefixer" ),
 htmlString = "<html><head><style>:fullscreen a { transition: transform 1s; }</style></head><body><h1 style='font-feature-settings: \"liga\", \"dlig\";'>Hello</h1></body></html>";
 
-var prefixed = autoprefixer.process( htmlString ).html;
+var prefixed = htmlAutoprefixer.process( htmlString ).html;
 ```
 
 ### Gulp
