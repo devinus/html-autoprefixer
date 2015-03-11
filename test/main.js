@@ -1,38 +1,48 @@
-var 
-assert = require( "assert" ),
-htmlAutoprefixer = require( "../lib/main" ),
-should = require( "should" );
+var htmlAutoprefixer = require('../lib/main');
+var should = require('should');
 
-var result;
+describe('html-autoprefixer', function() {
+  it('version should be set', function() {
+    htmlAutoprefixer.version.should.eql('0.0.1');
+  });
 
-describe( "html-autoprefixer", function( ) {
-  before( function( ) {
-    result = htmlAutoprefixer;
-  } );
+  describe('.process().html', function() {
+    it( 'autoprefixes inside of style tags', function( ) {
+      var htmlString = '<html><style>:fullscreen a { transition: transform 1s; }</style></html>';
+      var prefixedResult = '<html><style>:-webkit-full-screen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }:-moz-full-screen a { transition: transform 1s; }:-ms-fullscreen a { transition: transform 1s; }:fullscreen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }</style></html>';
 
-  it( "version should be set", function( ) {
-    result.version.should.eql( "0.0.1" ); 
-  } );
+      var prefixed = htmlAutoprefixer.process(htmlString).html;
 
-  describe( ".prcocess( ).html", function( ) {
-    it( "autoprefixes inside of style tags", function( ) {
-      var htmlString = "<html><style>:fullscreen a { transition: transform 1s; }</style></html>";
-      var prefixedResult = "<html><style>:-webkit-full-screen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }:-moz-full-screen a { transition: transform 1s; }:-ms-fullscreen a { transition: transform 1s; }:fullscreen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }</style></html>";
+      prefixed.should.eql(prefixedResult);
+    });
 
-      var prefixed = htmlAutoprefixer.process( htmlString ).html;
+    it( 'autoprefixes nested elements inside of style tags', function( ) {
+      var htmlString = '<html><style>@media screen and (max-width: 600px){ .class{ transition: transform 1s; } }</style></html>';
+      var prefixedResult = '<html><style>@media screen and (max-width: 600px){ .class{ -webkit-transition: -webkit-transform 1s; transition: transform 1s; } }</style></html>';
 
-      prefixed.should.eql( prefixedResult );
-    } );
+      var prefixed = htmlAutoprefixer.process(htmlString).html;
 
-    it( "autoprefixes inside of style attributes", function( ) {
-      var htmlString = "<html><h1 style='transition: transform 1s'>Hello</h1></html>";
-      var prefixedResult = "<html><h1 style=\"-webkit-transition: -webkit-transform 1s;transition: transform 1s\">Hello</h1></html>";
+      prefixed.should.eql(prefixedResult);
+    });
 
-      var prefixed = htmlAutoprefixer.process( htmlString ).html;
+    it( 'autoprefixes nested elements of when doing SVG hack', function( ) {
+      var htmlString = '<html><style>@media screen{ @media screen{ .svg{ transition: transform 1s; } } }</style></html>';
+      var prefixedResult = '<html><style>@media screen{ @media screen{ .svg{ -webkit-transition: -webkit-transform 1s; transition: transform 1s; } } }</style></html>';
 
-      prefixed.should.eql( prefixedResult );
-    } );
+      var prefixed = htmlAutoprefixer.process(htmlString).html;
 
-  } );
+      prefixed.should.eql(prefixedResult);
+    });
 
-} );
+    it('autoprefixes inside of style attributes', function() {
+      var htmlString = '<html><h1 style="transition: transform 1s">Hello</h1></html>';
+      var prefixedResult = '<html><h1 style="-webkit-transition: -webkit-transform 1s;transition: transform 1s">Hello</h1></html>';
+
+      var prefixed = htmlAutoprefixer.process(htmlString).html;
+
+      prefixed.should.eql(prefixedResult);
+    });
+
+  });
+
+});
