@@ -4,7 +4,7 @@
 
 Autoprefix all CSS inside an html page - CSS inside style tags and inside style attributes.
 
-[![BuildStatus](https://travis-ci.org/RebelMail/html-autoprefixer.png?branch=master)](https://travis-ci.org/motdotla/html-autoprefixer)
+[![BuildStatus](https://travis-ci.org/RebelMail/html-autoprefixer.png?branch=master)](https://travis-ci.org/RebelMail/html-autoprefixer)
 [![NPM version](https://badge.fury.io/js/html-autoprefixer.png)](http://badge.fury.io/js/html-autoprefixer)
 
 ```javascript
