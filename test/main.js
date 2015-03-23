@@ -5,7 +5,7 @@ var should = require('should');
 
 describe('html-autoprefixer', function() {
   it('version should be set', function() {
-    htmlAutoprefixer.version.should.eql('0.1.0');
+    htmlAutoprefixer.version.should.eql('0.2.0');
   });
 
   describe('.process().html', function() {
