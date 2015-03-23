@@ -28,7 +28,7 @@
     "should": ""
   },
   "dependencies": {
-    "autoprefixer": "^4.0.0",
+    "autoprefixer": "^5.1.0",
     "cheerio": "^0.18.0"
   }
 }
