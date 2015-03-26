@@ -1,6 +1,6 @@
 {
   "name": "html-autoprefixer",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Autoprefix all CSS inside an html page - CSS inside style tags and inside style attributes",
   "main": "lib/main.js",
   "directories": {
