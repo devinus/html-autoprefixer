@@ -5,7 +5,7 @@ var should = require('should');
 
 describe('html-autoprefixer', function() {
   it('version should be set', function() {
-    htmlAutoprefixer.version.should.eql('0.2.1');
+    htmlAutoprefixer.version.should.eql('0.3.0');
   });
 
   describe('.process().html', function() {
@@ -13,7 +13,7 @@ describe('html-autoprefixer', function() {
       var htmlString = '<html><style>:fullscreen a { transition: transform 1s; }</style></html>';
       var prefixedResult = '<html><style>:-webkit-full-screen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }\n:-moz-full-screen a { transition: transform 1s; }\n:-ms-fullscreen a { transition: transform 1s; }\n:fullscreen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }</style></html>';
 
-      var prefixed = htmlAutoprefixer.process(htmlString).html;
+      var prefixed = htmlAutoprefixer.process(htmlString);
       prefixed.should.eql(prefixedResult);
     });
 
@@ -21,7 +21,7 @@ describe('html-autoprefixer', function() {
       var htmlString = '<html><style>@media screen and (max-width: 600px){ .class{ transition: transform 1s; } }</style></html>';
       var prefixedResult = '<html><style>@media screen and (max-width: 600px){ .class{ -webkit-transition: -webkit-transform 1s; transition: transform 1s; } }</style></html>';
 
-      var prefixed = htmlAutoprefixer.process(htmlString).html;
+      var prefixed = htmlAutoprefixer.process(htmlString);
 
       prefixed.should.eql(prefixedResult);
     });
@@ -30,7 +30,7 @@ describe('html-autoprefixer', function() {
       var htmlString = '<html><style>@media screen{ @media screen{ .svg{ transition: transform 1s; } } }</style></html>';
       var prefixedResult = '<html><style>@media screen{ @media screen{ .svg{ -webkit-transition: -webkit-transform 1s; transition: transform 1s; } } }</style></html>';
 
-      var prefixed = htmlAutoprefixer.process(htmlString).html;
+      var prefixed = htmlAutoprefixer.process(htmlString);
 
       prefixed.should.eql(prefixedResult);
     });
@@ -39,7 +39,7 @@ describe('html-autoprefixer', function() {
       var htmlString = '<html><h1 style="transition: transform 1s">Hello</h1></html>';
       var prefixedResult = '<html><h1 style="-webkit-transition: -webkit-transform 1s;transition: transform 1s">Hello</h1></html>';
 
-      var prefixed = htmlAutoprefixer.process(htmlString).html;
+      var prefixed = htmlAutoprefixer.process(htmlString);
 
       prefixed.should.eql(prefixedResult);
     });
