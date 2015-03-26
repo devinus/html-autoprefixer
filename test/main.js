@@ -4,10 +4,6 @@ var htmlAutoprefixer = require('../lib/main');
 var should = require('should');
 
 describe('html-autoprefixer', function() {
-  it('version should be set', function() {
-    htmlAutoprefixer.version.should.eql('0.3.0');
-  });
-
   describe('.process().html', function() {
     it( 'autoprefixes inside of style tags', function( ) {
       var htmlString = '<html><style>:fullscreen a { transition: transform 1s; }</style></html>';
