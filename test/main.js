@@ -4,7 +4,7 @@ var htmlAutoprefixer = require('../lib/main');
 var should = require('should');
 
 describe('html-autoprefixer', function() {
-  describe('.process().html', function() {
+  describe('#process', function() {
     it( 'autoprefixes inside of style tags', function( ) {
       var htmlString = '<html><style>:fullscreen a { transition: transform 1s; }</style></html>';
       var prefixedResult = '<html><style>:-webkit-full-screen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }\n:-moz-full-screen a { transition: transform 1s; }\n:-ms-fullscreen a { transition: transform 1s; }\n:fullscreen a { -webkit-transition: -webkit-transform 1s; transition: transform 1s; }</style></html>';
