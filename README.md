@@ -28,6 +28,15 @@ var htmlString = "<html><head><style>:fullscreen a { transition: transform 1s; }
 var prefixed = htmlAutoprefixer.process(htmlString);
 ```
 
+You can optionally pass [cheerio options](https://github.com/cheeriojs/cheerio#loading).
+
+```javascript
+var htmlString = "<HTML></HTML>";
+
+var prefixed = htmlAutoprefixer.process(htmlString, { lowerCaseTags: true } );
+// <html></html>
+```
+
 ### Gulp
 
 [![](https://raw.githubusercontent.com/RebelMail/gulp-html-autoprefixer/master/gulp-html-autoprefixer.png)](https://github.com/RebelMail/gulp-html-autoprefixer)

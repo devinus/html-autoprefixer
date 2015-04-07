@@ -40,6 +40,16 @@ describe('html-autoprefixer', function() {
       prefixed.should.eql(prefixedResult);
     });
 
+    it('can pass cheerio options', function() {
+      var htmlString = '<HTML><BODY>Hello</BODY></HTML>';
+      var prefixedResult = '<html><body>Hello</body></html>';
+
+      var prefixed = htmlAutoprefixer.process(htmlString, { lowerCaseTags: true });
+
+      prefixed.should.eql(prefixedResult);
+
+    });
+
   });
 
 });
