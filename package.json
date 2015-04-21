@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "istanbul test _mocha -- --recursive"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,12 @@
   "author": "motdotla",
   "license": "BSD",
   "devDependencies": {
-    "mocha": "",
-    "should": ""
+    "chai": "^2.2.0",
+    "istanbul": "^0.3.13",
+    "mocha": "^2.2.4"
   },
   "dependencies": {
-    "autoprefixer": "^5.1.0",
-    "cheerio": "^0.18.0"
+    "autoprefixer": "^5.1.1",
+    "cheerio": "^0.19.0"
   }
 }
