@@ -24,9 +24,9 @@
   "author": "motdotla",
   "license": "BSD",
   "devDependencies": {
-    "chai": "^2.2.0",
-    "istanbul": "^0.3.13",
-    "mocha": "^2.2.4"
+    "chai": "^2.3.0",
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5"
   },
   "dependencies": {
     "autoprefixer": "^5.1.1",
