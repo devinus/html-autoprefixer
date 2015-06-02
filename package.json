@@ -18,7 +18,8 @@
     "html",
     "html-autoprefixer",
     "auto-prefixer",
-    "css"
+    "css",
+    "postcss"
   ],
   "readmeFilename": "README.md",
   "author": "motdotla",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "autoprefixer": "^5.1.1",
-    "cheerio": "^0.19.0"
+    "cheerio": "^0.19.0",
+    "postcss": "^4.1.11"
   }
 }
