@@ -23,15 +23,16 @@
   ],
   "readmeFilename": "README.md",
   "author": "motdotla",
-  "license": "BSD",
+  "license": "ISC",
   "devDependencies": {
-    "chai": "^2.3.0",
-    "istanbul": "^0.3.14",
+    "chai": "^3.2.0",
+    "istanbul": "^0.3.17",
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "autoprefixer": "^5.1.1",
+    "autoprefixer": "^5.2.0",
     "cheerio": "^0.19.0",
-    "postcss": "^4.1.11"
+    "html-postcss": "^0.1.0",
+    "postcss": "^4.1.16"
   }
 }
