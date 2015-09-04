@@ -31,8 +31,6 @@
   },
   "dependencies": {
     "autoprefixer": "^5.2.0",
-    "cheerio": "^0.19.0",
-    "html-postcss": "^0.1.0",
-    "postcss": "^4.1.16"
+    "html-postcss": "^0.1.0"
   }
 }
