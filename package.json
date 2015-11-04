@@ -25,12 +25,12 @@
   "author": "motdotla",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.2.0",
-    "istanbul": "^0.3.17",
-    "mocha": "^2.2.5"
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4"
   },
   "dependencies": {
-    "autoprefixer": "^5.2.0",
-    "html-postcss": "^0.1.0"
+    "autoprefixer": "^6.1.1",
+    "html-postcss": "^0.1.2"
   }
 }
