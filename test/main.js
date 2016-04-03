@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect;
 
-var htmlAutoprefixer = require('../');
+var htmlAutoprefixer = require('../')();
 
 describe('html-autoprefixer', function() {
   describe('#process', function() {
