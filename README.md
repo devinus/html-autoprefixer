@@ -1,4 +1,4 @@
-# tempusdominus
+# tonix-html-autoprefixer
 
 This package is a fork of the original [html-autoprefixer](https://github.com/devinus/html-autoprefixer) repo.
 
