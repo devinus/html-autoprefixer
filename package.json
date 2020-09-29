@@ -7,7 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish-git": "npm publish && git push && git push --tags",
+    "publish-patch": "npm version patch && npm run publish-git",
+    "publish-minor": "npm version minor && npm run publish-git",
+    "publish-major": "npm version major && npm run publish-git"
   },
   "repository": {
     "type": "git",
