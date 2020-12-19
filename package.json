@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "istanbul test _mocha -- --recursive",
     "publish-git": "npm publish && git push && git push --tags",
     "publish-patch": "npm version patch && npm run publish-git",
     "publish-minor": "npm version minor && npm run publish-git",
@@ -30,10 +30,12 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.1.3"
+    "istanbul": "^0.4.1",
+    "mocha": "^8.2.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.0.1",
-    "tonix-html-postcss": "^1.0.0"
+    "autoprefixer": "^10.1.0",
+    "tonix-html-postcss": "^1.0.0",
+    "postcss": "^8.2.1"
   }
 }
