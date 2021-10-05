@@ -1,6 +1,6 @@
 {
   "name": "tonix-html-autoprefixer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Autoprefix all CSS inside an html page - CSS inside style tags and inside style attributes",
   "main": "lib/main.js",
   "bin": "lib/cli.js",
